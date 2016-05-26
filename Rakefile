@@ -44,7 +44,7 @@ task :update => [$repo_dir, :fetch_themes] do
         open(dst, 'w') { |o| open(src) { |i| o.write i.read } }
         `git add #{dst}`
       end
-      `git commit -m 'swatch #{name.capitalize}'`
+      `git commit -m 'swatch #{name.capitalize}.'`
     end
   end
 end
